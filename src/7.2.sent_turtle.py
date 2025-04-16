@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sat Apr  5 17:41:08 2025
 
@@ -25,7 +24,7 @@ class PostOffice:
         self.message_id = 0
         self.boxes = {user: [] for user in usernames}
 
-    def send_message(self, sender, recipient, message_body, subject, urgent=False):
+    def send_message(self, sender, recipient, message_body, urgent=False):
         """Send a message to a recipient.
 
         Parameters
@@ -36,8 +35,6 @@ class PostOffice:
             The message recipient's username.
         message_body : str
             The body of the message.
-        subject : str
-            The subject of the message.
         urgent : bool, optional
             The urgency of the message.
             Urgent messages appear first.
@@ -70,7 +67,6 @@ class PostOffice:
         message_details = {
             'id': self.message_id,
             'body': message_body,
-            'subject': subject,
             'sender': sender,
         }
         if urgent:
@@ -79,9 +75,9 @@ class PostOffice:
             user_box.append(message_details)
         return self.message_id
 
-def sent_turtle_read_inbox(self, username, N=None):
+def sent_turtle_read_inbox(self, username, n=None):
     """A Method that returns the unreaded messages.
-    
+
      Parameters
      ----------
      username : str
@@ -101,14 +97,14 @@ def sent_turtle_read_inbox(self, username, N=None):
     """
     if username not in self.boxes:
         raise KeyError(f"User '{username}' not found")
-    
+
     user_box = self.boxes[username]
-    if N is None:
+    if n is None:
         messages = user_box[:]
         self.boxes[username] = []
     else:
-        messages = user_box[:N]
-        self.boxes[username] = user_box[N:]
+        messages = user_box[:n]
+        self.boxes[username] = user_box[n:]
 
     return messages
 
@@ -137,7 +133,7 @@ def sent_turtle_search_inbox(self, username, string):
         raise KeyError(f"User '{username}' not found")
 
     return [
-        msg for msg in self.boxes[username] 
+        msg for msg in self.boxes[username]
         if string in msg.get('body', '') or string in msg.get('subject', '')
             ]
 
