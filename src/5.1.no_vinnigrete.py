@@ -9,6 +9,9 @@ import datetime
 import random
 
 def no_vinnigrete(start_date, end_date):
+    """
+    Generates a random date between start_date and end_date.
+    """
     start_date_date = datetime.date.fromisoformat(start_date)
     end_date_date = datetime.date.fromisoformat(end_date)
     start_date_int = start_date_date.toordinal()
@@ -18,8 +21,8 @@ def no_vinnigrete(start_date, end_date):
     if random_date.weekday() == 0:
         print("No Vinnigrete!")
     return random_date
-    
-    
+
+
 if __name__ == '__main__':
     start = input("(YYYY-MM-DD): ")
     end = input("(YYYY-MM-DD): ")
