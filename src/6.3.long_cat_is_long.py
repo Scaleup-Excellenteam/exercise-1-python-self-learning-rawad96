@@ -6,8 +6,7 @@ Created on Sat Apr  5 14:53:06 2025
 """
 
 def long_cat_is_long(text):
-    """
-    Returns a dictionary mapping each word to its length.
+    """Returns a dictionary mapping each word to its length.
 
     Parameters:
     text (str): The input string to process.

@@ -7,8 +7,7 @@ Created on Sat Apr  5 15:48:46 2025
 from PIL import Image
 
 def remember_remember(img_path):
-    """
-    Extracts a hidden message from an encoded image.
+    """Extracts a hidden message from an encoded image.
 
     The image is encoded such that each column contains exactly one black pixel.
     The row index of this black pixel corresponds to the ASCII value of a character.

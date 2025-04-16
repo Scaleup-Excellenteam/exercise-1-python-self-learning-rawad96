@@ -6,8 +6,7 @@ Created on Fri Apr  4 18:31:55 2025
 """
 
 def piece_of_cake(prices, optionals=None, **kwargs):
-    """
-    Calculates the total cost of ingredients required for a recipe.
+    """Calculates the total cost of ingredients required for a recipe.
 
     Parameters:
     prices (dict): A dictionary where each key is the name of an ingredient (as a single word, no spaces or special characters),

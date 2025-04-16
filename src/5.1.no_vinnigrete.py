@@ -9,9 +9,8 @@ import datetime
 import random
 
 def no_vinnigrete(start_date, end_date):
-    """
-    Generates a random date between start_date and end_date.
-    
+    """Generates a random date between start_date and end_date.
+
     Parameters:
     start_date (str): The start date.
     end_date (str): The end date.

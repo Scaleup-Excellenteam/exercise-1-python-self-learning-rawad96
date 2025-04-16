@@ -7,8 +7,7 @@ Created on Fri Apr  4 17:10:05 2025
 import os
 
 def thats_the_way(folder_path):
-    """
-    Returns a list of all filenames in the given directory that start with the prefix 'deep'.
+    """Returns a list of all filenames in the given directory that start with the prefix 'deep'.
 
     Parameters:
     folder_path (str): The path to the directory to search in.

@@ -7,8 +7,7 @@ Created on Sat Apr  5 02:38:07 2025
 import time
 
 def running_2000(func, *args):
-    """
-    Measures and returns the execution time of the given function 
+    """Measures and returns the execution time of the given function 
     when called with the provided arguments.
 
     Parameters:

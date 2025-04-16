@@ -6,8 +6,7 @@ Created on Sat Apr  5 16:01:14 2025
 """
 
 def group_by(func, iterr):
-    """
-     Groups elements from the given iterable based on the result of applying a function to each element.
+    """Groups elements from the given iterable based on the result of applying a function to each element.
 
     Parameters:
     func (callable): A function that takes a single argument and returns a value to group by.

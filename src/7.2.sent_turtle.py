@@ -80,41 +80,41 @@ class PostOffice:
         return self.message_id
 
 def sent_turtle_read_inbox(self, username, N=None):
-     """A Method that returns the unreaded messages.
+    """A Method that returns the unreaded messages.
     
-    Parameters
-    ----------
-    username : str
-        Username whose inbox we want to read
-    N : int
-        Number of messages to read (optional).
+     Parameters
+     ----------
+     username : str
+         Username whose inbox we want to read
+     N : int
+         Number of messages to read (optional).
 
-    Returns
+     Returns
         -------
         list
            A list of messages (dicts).
      
-    Raises
+     Raises
         ------
         KeyError
             if the user does not exist.
     """
-     if username not in self.boxes:
-            raise KeyError(f"User '{username}' not found")
+    if username not in self.boxes:
+        raise KeyError(f"User '{username}' not found")
     
-     user_box = self.boxes[username]
-     if N is None:
-         messages = user_box[:]
-         self.boxes[username] = []
-     else:
-         messages = user_box[:N]
-         self.boxes[username] = user_box[N:]
+    user_box = self.boxes[username]
+    if N is None:
+        messages = user_box[:]
+        self.boxes[username] = []
+    else:
+        messages = user_box[:N]
+        self.boxes[username] = user_box[N:]
 
-     return messages
+    return messages
 
 
 def sent_turtle_search_inbox(self, username, string):
-        """A Method that return a messages list that contain the string.
+    """A Method that return a messages list that contain the string.
 
         Parameters
         ----------
@@ -132,14 +132,14 @@ def sent_turtle_search_inbox(self, username, string):
         ------
         KeyError
             if the user does not exist.
-        """
-        if username not in self.boxes:
-            raise KeyError(f"User '{username}' not found")
+    """
+    if username not in self.boxes:
+        raise KeyError(f"User '{username}' not found")
 
-        return [
-            msg for msg in self.boxes[username]
-            if string in msg.get('body', '') or string in msg.get('subject', '')
-        ]
+    return [
+        msg for msg in self.boxes[username] 
+        if string in msg.get('body', '') or string in msg.get('subject', '')
+            ]
 
 if __name__ == '__main__':
     """

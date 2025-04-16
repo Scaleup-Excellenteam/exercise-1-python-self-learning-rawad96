@@ -6,8 +6,8 @@ Created on Fri Apr  4 18:37:18 2025
 """
 
 def communicatin_vessels(*iterables):
-    """
-    Interleaves multiple iterables by yielding one item at a time from each, in the order they are zipped.
+    """Interleaves multiple iterables by yielding one item at a time from each,
+    in the order they are zipped.
 
     Parameters:
     *iterables: Any number of iterable objects (e.g., strings, lists, tuples) of equal length.

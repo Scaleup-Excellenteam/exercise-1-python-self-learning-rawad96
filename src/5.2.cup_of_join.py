@@ -6,8 +6,7 @@ Created on Fri Apr  4 18:21:53 2025
 """
 
 def cup_of_join(*lists, sep='-'):
-    """
-    Joins multiple input lists into a single list, 
+    """Joins multiple input lists into a single list, 
     inserting a separator element between each pair of lists.
 
     Parameters:
