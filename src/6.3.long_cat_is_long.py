@@ -16,6 +16,7 @@ def long_cat_is_long(text):
     words_len (dict): A dictionary where the keys are the cleaned words from the input text,
           and the values are the lengths of those words.
     """
+
     clean_text = ''.join(c if c.isalpha() or c.isspace() else " " for c in text)
 
     words_len = {word: len(word) for word in set(clean_text.split())}
@@ -24,6 +25,9 @@ def long_cat_is_long(text):
 
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     print(long_cat_is_long("""You see, wire telegraph is a kind of a very, very long cat.
 You pull his tail in New York and his head is meowing in Los Angeles.
 Do you understand this?

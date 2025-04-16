@@ -8,7 +8,8 @@ import time
 
 def running_2000(func, *args):
     """
-    Measures and returns the execution time of the given function when called with the provided arguments.
+    Measures and returns the execution time of the given function 
+    when called with the provided arguments.
 
     Parameters:
     func (callable): The function to be executed and timed.
@@ -17,11 +18,15 @@ def running_2000(func, *args):
     Returns:
     float: The time taken (in seconds) to execute the function `f` with the arguments.
     """
+
     start = time.time()
     func(*args)
     end = time.time()
 
-    return end - start    
+    return end - start
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     print(running_2000(print, "Hello"))

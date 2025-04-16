@@ -19,6 +19,7 @@ def thats_the_way(folder_path):
     Notes:
     - Only files (not subdirectories) are considered.
     """
+
     if not os.path.isdir(folder_path):
         return []
 
@@ -32,4 +33,7 @@ def thats_the_way(folder_path):
 
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     print(thats_the_way("C:\\Users\\USER\\git-pull-request-training-rawad96\\Images"))

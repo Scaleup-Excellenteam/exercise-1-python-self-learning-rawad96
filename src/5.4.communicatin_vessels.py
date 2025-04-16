@@ -15,9 +15,13 @@ def communicatin_vessels(*iterables):
     Yields:
     Elements from the input iterables, interleaved one by one.
     """
+
     for group in zip(*iterables):
         yield from group
 
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     print(list(communicatin_vessels('abc', [1, 2, 3], ('!', '@', '#'))))

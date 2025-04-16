@@ -142,23 +142,6 @@ def sent_turtle_search_inbox(self, username, string):
         ]
 
 if __name__ == '__main__':
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    """
+    Main function
+    """

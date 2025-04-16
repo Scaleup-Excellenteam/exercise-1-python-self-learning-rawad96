@@ -19,6 +19,7 @@ def no_vinnigrete(start_date, end_date):
     Returns:
     random_date [date]: A random date between start_date and end_date.
     """
+
     start_date_date = datetime.date.fromisoformat(start_date)
     end_date_date = datetime.date.fromisoformat(end_date)
     start_date_int = start_date_date.toordinal()
@@ -31,6 +32,9 @@ def no_vinnigrete(start_date, end_date):
 
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     start = input("(YYYY-MM-DD): ")
     end = input("(YYYY-MM-DD): ")
     print(no_vinnigrete(start, end))

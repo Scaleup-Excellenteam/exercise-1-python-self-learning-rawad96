@@ -25,6 +25,7 @@ def piece_of_cake(prices, optionals=None, **kwargs):
     total_price (int): The total cost (rounded down to the nearest integer) to purchase the specified ingredients,
          excluding any that are marked as optional.
     """
+
     if not prices:
         return 0
 
@@ -42,4 +43,7 @@ def piece_of_cake(prices, optionals=None, **kwargs):
 
 
 if __name__ == '__main__':
+    """
+    Main function
+    """
     print(piece_of_cake({'chocolate': 18, 'milk': 8}, chocolate=200, milk=100))
