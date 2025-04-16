@@ -11,6 +11,13 @@ import random
 def no_vinnigrete(start_date, end_date):
     """
     Generates a random date between start_date and end_date.
+    
+    Parameters:
+    start_date (str): The start date.
+    end_date (str): The end date.
+
+    Returns:
+    random_date [date]: A random date between start_date and end_date.
     """
     start_date_date = datetime.date.fromisoformat(start_date)
     end_date_date = datetime.date.fromisoformat(end_date)

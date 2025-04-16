@@ -6,10 +6,18 @@ Created on Fri Apr  4 18:37:18 2025
 """
 
 def communicatin_vessels(*iterables):
+    """
+    Interleaves multiple iterables by yielding one item at a time from each, in the order they are zipped.
+
+    Parameters:
+    *iterables: Any number of iterable objects (e.g., strings, lists, tuples) of equal length.
+
+    Yields:
+    Elements from the input iterables, interleaved one by one.
+    """
     for group in zip(*iterables):
-        for item in group:
-            yield item
-            
-            
+        yield from group
+
+
 if __name__ == '__main__':
     print(list(communicatin_vessels('abc', [1, 2, 3], ('!', '@', '#'))))

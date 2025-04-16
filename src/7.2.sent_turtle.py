@@ -24,7 +24,7 @@ class PostOffice:
     def __init__(self, usernames):
         self.message_id = 0
         self.boxes = {user: [] for user in usernames}
-        
+
     def send_message(self, sender, recipient, message_body, subject, urgent=False):
         """Send a message to a recipient.
 
@@ -140,7 +140,7 @@ def sent_turtle_search_inbox(self, username, string):
             msg for msg in self.boxes[username]
             if string in msg.get('body', '') or string in msg.get('subject', '')
         ]
-    
+
 if __name__ == '__main__':
     
     
